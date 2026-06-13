@@ -1,5 +1,10 @@
+# servidor_mcp.py
+import sys
+import logging
 import httpx
 from mcp.server.fastmcp import FastMCP
+
+logging.basicConfig(level=logging.WARNING, stream=sys.stderr)
 
 API = "http://localhost:8000"
 mcp = FastMCP("tarefas-mcp")
